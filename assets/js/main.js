@@ -1,24 +1,28 @@
 let btn=document.getElementById("btn")
-let name=document.getElementById("name")
-let surname=document.getElementById("surname")
-let age=document.getElementById("age")
-let table=document.getElementById("tab")
-let td1=document.getElementById("td1")
-let td2=document.getElementById("td2")
-let td3=document.getElementById("td3")
+btn.onclick=function(){
+    let valueName=document.getElementById("name").value.trim()
+    let valueSurname=document.getElementById("surname").value.trim()
+    let valueAge=document.getElementById("age").value.trim()
 
-btn.addEventListener("click",function(){
-    let valueName=name.value.trim()
-    let valueSurname=surname.value.trim()
-    let valueAge=age.value.trim()
 
-  
-    td1.innerText=valueName
-    td2.innerText=valueSurname
-    td3.innerText=valueAge
-         table.append(td1,td2,td3)
-  
+    var tr=document.createElement('tr')
+    var td1=tr.appendChild(document.createElement('td'))
+    var td2=tr.appendChild(document.createElement('td'))
+    var td3=tr.appendChild(document.createElement('td'))
 
-   
+td1.innerHTML=valueName
+td2.innerHTML=valueSurname
+td3.innerHTML=valueAge
+document.getElementById("tb").appendChild(tr)
+}
 
-})
+
+
+
+
+
+
+
+
+
+
